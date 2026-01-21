@@ -1,6 +1,6 @@
 # StockStatus - macOS Menu Bar Stock Tracker
 
-A native macOS status bar application that displays real-time stock prices and tracks your portfolio directly from your menu bar.
+A vibe coded native macOS status bar application that displays real-time stock prices and tracks your portfolio directly from your menu bar.
 
 ![macOS](https://img.shields.io/badge/macOS-13.0+-blue)
 ![Swift](https://img.shields.io/badge/Swift-5.9+-orange)
