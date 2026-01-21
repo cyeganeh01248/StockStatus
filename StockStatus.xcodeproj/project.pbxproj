@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A0000001 /* StockStatusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000 /* StockStatusApp.swift */; };
+		A0000003 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000002 /* AppDelegate.swift */; };
+		A0000005 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000004 /* Stock.swift */; };
+		A0000007 /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000006 /* Portfolio.swift */; };
+		A0000009 /* StockQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000008 /* StockQuote.swift */; };
+		A000000B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000A /* DataManager.swift */; };
+		A000000D /* YahooFinanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000C /* YahooFinanceService.swift */; };
+		A000000F /* UpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000000E /* UpdateManager.swift */; };
+		A0000011 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000010 /* StatusBarController.swift */; };
+		A0000013 /* MenuPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000012 /* MenuPopoverView.swift */; };
+		A0000015 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000014 /* PortfolioView.swift */; };
+		A0000017 /* StockDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000016 /* StockDetailView.swift */; };
+		A0000019 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000018 /* PreferencesWindowController.swift */; };
+		A000001B /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000001A /* PreferencesView.swift */; };
+		A000001D /* StockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000001C /* StockViewModel.swift */; };
+		A000001F /* PortfolioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000001E /* PortfolioViewModel.swift */; };
+		A0000021 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000020 /* Extensions.swift */; };
+		A0000023 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000022 /* Constants.swift */; };
+		A0000025 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0000024 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A00000FF /* StockStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0000000 /* StockStatusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockStatusApp.swift; sourceTree = "<group>"; };
+		A0000002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A0000004 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		A0000006 /* Portfolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
+		A0000008 /* StockQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockQuote.swift; sourceTree = "<group>"; };
+		A000000A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		A000000C /* YahooFinanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YahooFinanceService.swift; sourceTree = "<group>"; };
+		A000000E /* UpdateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateManager.swift; sourceTree = "<group>"; };
+		A0000010 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		A0000012 /* MenuPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPopoverView.swift; sourceTree = "<group>"; };
+		A0000014 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
+		A0000016 /* StockDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailView.swift; sourceTree = "<group>"; };
+		A0000018 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
+		A000001A /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		A000001C /* StockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewModel.swift; sourceTree = "<group>"; };
+		A000001E /* PortfolioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewModel.swift; sourceTree = "<group>"; };
+		A0000020 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A0000022 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A0000024 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A0000026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0000027 /* StockStatus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StockStatus.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A00000FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A00000F6 = {
+			isa = PBXGroup;
+			children = (
+				A00000F7 /* StockStatus */,
+				A0000100 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A00000F7 /* StockStatus */ = {
+			isa = PBXGroup;
+			children = (
+				A0000000 /* StockStatusApp.swift */,
+				A0000002 /* AppDelegate.swift */,
+				A0000028 /* Models */,
+				A0000029 /* ViewModels */,
+				A000002A /* Views */,
+				A000002E /* Services */,
+				A000002F /* Utilities */,
+				A0000030 /* Resources */,
+			);
+			path = StockStatus;
+			sourceTree = "<group>";
+		};
+		A0000028 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A0000004 /* Stock.swift */,
+				A0000006 /* Portfolio.swift */,
+				A0000008 /* StockQuote.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A0000029 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A000001C /* StockViewModel.swift */,
+				A000001E /* PortfolioViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A000002A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A000002B /* StatusBar */,
+				A000002C /* Portfolio */,
+				A000002D /* Settings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A000002B /* StatusBar */ = {
+			isa = PBXGroup;
+			children = (
+				A0000010 /* StatusBarController.swift */,
+				A0000012 /* MenuPopoverView.swift */,
+			);
+			path = StatusBar;
+			sourceTree = "<group>";
+		};
+		A000002C /* Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				A0000014 /* PortfolioView.swift */,
+				A0000016 /* StockDetailView.swift */,
+			);
+			path = Portfolio;
+			sourceTree = "<group>";
+		};
+		A000002D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A0000018 /* PreferencesWindowController.swift */,
+				A000001A /* PreferencesView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		A000002E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A000000A /* DataManager.swift */,
+				A000000C /* YahooFinanceService.swift */,
+				A000000E /* UpdateManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A000002F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A0000020 /* Extensions.swift */,
+				A0000022 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A0000030 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A0000024 /* Assets.xcassets */,
+				A0000026 /* Info.plist */,
+				A0000027 /* StockStatus.entitlements */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A0000100 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A00000FF /* StockStatus.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A00000FE /* StockStatus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A00000F3 /* Build configuration list for PBXNativeTarget "StockStatus" */;
+			buildPhases = (
+				A00000FB /* Sources */,
+				A00000FC /* Frameworks */,
+				A00000FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StockStatus;
+			productName = StockStatus;
+			productReference = A00000FF /* StockStatus.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A00000F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = A00000F9 /* Build configuration list for PBXProject "StockStatus" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A00000F6;
+			productRefGroup = A0000100 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A00000FE /* StockStatus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A00000FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0000025 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A00000FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0000001 /* StockStatusApp.swift in Sources */,
+				A0000003 /* AppDelegate.swift in Sources */,
+				A0000005 /* Stock.swift in Sources */,
+				A0000007 /* Portfolio.swift in Sources */,
+				A0000009 /* StockQuote.swift in Sources */,
+				A000000B /* DataManager.swift in Sources */,
+				A000000D /* YahooFinanceService.swift in Sources */,
+				A000000F /* UpdateManager.swift in Sources */,
+				A0000011 /* StatusBarController.swift in Sources */,
+				A0000013 /* MenuPopoverView.swift in Sources */,
+				A0000015 /* PortfolioView.swift in Sources */,
+				A0000017 /* StockDetailView.swift in Sources */,
+				A0000019 /* PreferencesWindowController.swift in Sources */,
+				A000001B /* PreferencesView.swift in Sources */,
+				A000001D /* StockViewModel.swift in Sources */,
+				A000001F /* PortfolioViewModel.swift in Sources */,
+				A0000021 /* Extensions.swift in Sources */,
+				A0000023 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A00000F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = StockStatus/Resources/StockStatus.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = StockStatus/Resources/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = "";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stockstatus.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A00000F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = StockStatus/Resources/StockStatus.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = StockStatus/Resources/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = "";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stockstatus.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A00000FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A00000FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A00000F3 /* Build configuration list for PBXNativeTarget "StockStatus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A00000F4 /* Debug */,
+				A00000F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A00000F9 /* Build configuration list for PBXProject "StockStatus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A00000FA /* Debug */,
+				A00000FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A00000F8 /* Project object */;
+}
