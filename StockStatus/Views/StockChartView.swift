@@ -17,33 +17,61 @@ struct StockChartView: View {
         intradayData.first?.price ?? 0
     }
 
-    // Market hours: 9:30 AM - 4:00 PM EST
+    // Market hours: 9:30 AM - 4:00 PM EST/EDT
     private var marketOpen: Date {
         guard let firstPoint = intradayData.first else { return Date() }
-        let calendar = Calendar.current
-        var components = calendar.dateComponents([.year, .month, .day, .timeZone], from: firstPoint.timestamp)
+
+        // Use New York timezone for stock market hours
+        guard let nyTimeZone = TimeZone(identifier: "America/New_York") else {
+            return firstPoint.timestamp
+        }
+
+        var calendar = Calendar.current
+        calendar.timeZone = nyTimeZone
+
+        var components = calendar.dateComponents([.year, .month, .day], from: firstPoint.timestamp)
         components.hour = 9
         components.minute = 30
+        components.timeZone = nyTimeZone
+
         return calendar.date(from: components) ?? firstPoint.timestamp
     }
 
     private var marketClose: Date {
         guard let firstPoint = intradayData.first else { return Date() }
-        let calendar = Calendar.current
-        var components = calendar.dateComponents([.year, .month, .day, .timeZone], from: firstPoint.timestamp)
+
+        // Use New York timezone for stock market hours
+        guard let nyTimeZone = TimeZone(identifier: "America/New_York") else {
+            return firstPoint.timestamp
+        }
+
+        var calendar = Calendar.current
+        calendar.timeZone = nyTimeZone
+
+        var components = calendar.dateComponents([.year, .month, .day], from: firstPoint.timestamp)
         components.hour = 16
         components.minute = 0
+        components.timeZone = nyTimeZone
+
         return calendar.date(from: components) ?? firstPoint.timestamp
     }
 
     private func xAxisValues() -> [Date] {
         guard let firstPoint = intradayData.first else { return [] }
-        let calendar = Calendar.current
+
+        // Use New York timezone for stock market hours
+        guard let nyTimeZone = TimeZone(identifier: "America/New_York") else {
+            return []
+        }
+
+        var calendar = Calendar.current
+        calendar.timeZone = nyTimeZone
+
         var values: [Date] = []
 
-        let baseComponents = calendar.dateComponents([.year, .month, .day, .timeZone], from: firstPoint.timestamp)
+        let baseComponents = calendar.dateComponents([.year, .month, .day], from: firstPoint.timestamp)
 
-        // Generate every 30 minutes from 9:30 AM to 4:00 PM
+        // Generate every 30 minutes from 9:30 AM to 4:00 PM EST/EDT
         let times: [(hour: Int, minute: Int)] = [
             (9, 30),   // 9:30 AM
             (10, 0),   // 10:00 AM
@@ -65,6 +93,7 @@ struct StockChartView: View {
             var components = baseComponents
             components.hour = time.hour
             components.minute = time.minute
+            components.timeZone = nyTimeZone
             if let date = calendar.date(from: components) {
                 values.append(date)
             }
