@@ -1,5 +1,17 @@
 import SwiftUI
 
+struct VisualEffectBackground: NSViewRepresentable {
+    func makeNSView(context: Context) -> NSVisualEffectView {
+        let view = NSVisualEffectView()
+        view.material = .popover
+        view.blendingMode = .behindWindow
+        view.state = .active
+        return view
+    }
+
+    func updateNSView(_ nsView: NSVisualEffectView, context: Context) {}
+}
+
 struct MenuPopoverView: View {
     @StateObject private var stockViewModel = StockViewModel()
     @StateObject private var portfolioViewModel = PortfolioViewModel()
@@ -9,7 +21,12 @@ struct MenuPopoverView: View {
     @State private var currentHeight: Double = 700
 
     var body: some View {
-        VStack(spacing: 0) {
+        ZStack {
+            // Visual effect background for proper transparency
+            VisualEffectBackground()
+                .ignoresSafeArea()
+
+            VStack(spacing: 0) {
             ScrollView {
                 VStack(spacing: 0) {
                     // Header with stock details
@@ -81,6 +98,7 @@ struct MenuPopoverView: View {
             }
             .buttonStyle(.borderless)
             .padding()
+            }
         }
         .frame(width: 420, height: currentHeight)
         .onAppear {
