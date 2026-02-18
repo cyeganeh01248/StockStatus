@@ -394,6 +394,8 @@ struct QuickSymbolsEditView: View {
     private func removeSymbol(_ symbol: String) {
         quickSymbols.removeAll { $0 == symbol }
         dataManager.setQuickSymbols(quickSymbols)
+        updateManager.validateCurrentSymbol()
+        updateManager.refreshNow()
     }
 
     private func moveSymbol(from index: Int, direction: Int) {
@@ -469,6 +471,7 @@ struct AddQuickSymbolView: View {
     @Binding var isPresented: Bool
     @State private var symbol: String = ""
     private let dataManager = DataManager.shared
+    private let updateManager = UpdateManager.shared
 
     var body: some View {
         VStack(spacing: 20) {
@@ -507,6 +510,8 @@ struct AddQuickSymbolView: View {
         let trimmed = symbol.uppercased().trimmingCharacters(in: .whitespaces)
         if !trimmed.isEmpty {
             dataManager.addQuickSymbol(trimmed)
+            updateManager.validateCurrentSymbol()
+            updateManager.refreshNow()
             isPresented = false
         }
     }

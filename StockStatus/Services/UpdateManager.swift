@@ -96,9 +96,19 @@ class UpdateManager: ObservableObject {
     }
 
     func refreshNow() {
+        validateCurrentSymbol()
         Task {
             await fetchCurrentStock()
             await fetchQuickSymbols()
+        }
+    }
+
+    /// If currentSymbol is no longer in the quick symbols list, switch to the first available symbol.
+    func validateCurrentSymbol() {
+        let symbols = dataManager.getQuickSymbols()
+        if !symbols.contains(currentSymbol), let first = symbols.first {
+            currentSymbol = first
+            dataManager.setDefaultSymbol(first)
         }
     }
 
