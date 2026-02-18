@@ -104,9 +104,15 @@ class UpdateManager: ObservableObject {
     }
 
     /// If currentSymbol is no longer in the quick symbols list, switch to the first available symbol.
+    /// If the list is empty, default to SPY for general market watching.
     func validateCurrentSymbol() {
         let symbols = dataManager.getQuickSymbols()
-        if !symbols.contains(currentSymbol), let first = symbols.first {
+        if symbols.isEmpty {
+            // No symbols in list, default to SPY for market watching
+            currentSymbol = "SPY"
+            dataManager.setDefaultSymbol("SPY")
+        } else if !symbols.contains(currentSymbol), let first = symbols.first {
+            // Current symbol not in list, switch to first available
             currentSymbol = first
             dataManager.setDefaultSymbol(first)
         }
